@@ -1,8 +1,8 @@
 class GifsController < ApplicationController
-
   def index
     if params[:q].present?
-      render json: {}
+      gifs = GiphyClient.new.search(params[:q])
+      render json: gifs
     else
       render json: {}, status: 400
     end
