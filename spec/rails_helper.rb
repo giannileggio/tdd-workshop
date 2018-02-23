@@ -20,9 +20,11 @@ require 'rspec/rails'
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
 ENV['RAILS_ENV'] = 'test'
 
+require 'httplog'
 require 'spec_helper'
 require 'rspec/rails'
 require 'vcr'
+require 'pry'
 
 ActiveRecord::Migration.maintain_test_schema!
 Dir['./spec/support/**/*.rb'].sort.each { |f| require f }

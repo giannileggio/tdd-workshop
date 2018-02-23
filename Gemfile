@@ -8,6 +8,8 @@ end
 gem 'rails', '~> 5.1.5'
 gem 'sqlite3'
 gem 'puma', '~> 3.7'
+gem 'httparty'
+gem 'httplog'
 
 group :test do
   gem 'webmock'
@@ -22,6 +24,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'pry-byebug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
