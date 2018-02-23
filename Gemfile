@@ -10,6 +10,7 @@ gem 'sqlite3'
 gem 'puma', '~> 3.7'
 
 group :test do
+  gem 'webmock'
   gem 'rspec'
   gem 'rspec-rails'
   gem 'vcr', require: false                       # RSPEC Record HTTP
