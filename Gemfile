@@ -13,6 +13,7 @@ group :test do
   gem 'rspec'
   gem 'rspec-rails'
   gem 'vcr', require: false                       # RSPEC Record HTTP
+  gem 'webmock'
 end
 
 group :development, :test do
