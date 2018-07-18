@@ -17,6 +17,10 @@ RSpec.describe '/gifs' do
     end
 
     context 'when there is no parameter' do
+      it 'returns response code 400' do
+        get '/gifs'
+        expect(response.code).to eq '400'
+      end
     end
   end
 end
