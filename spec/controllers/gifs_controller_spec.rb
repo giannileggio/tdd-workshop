@@ -13,7 +13,7 @@ RSpec.describe GifsController, type: :controller do
 
     before do
       allow(GiphyClient).to receive(:new).and_return(client)
-      index      
+      index
     end
 
     it 'calls the giphy client' do

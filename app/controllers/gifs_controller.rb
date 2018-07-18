@@ -7,4 +7,8 @@ class GifsController < ApplicationController
       render json: {}, status: 400
     end
   end
+
+  def show
+    render json: {}
+  end
 end
