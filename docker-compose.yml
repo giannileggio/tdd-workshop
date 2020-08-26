@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  rspec:
+    command: bundle exec rspec -f documentation .
+    build: .
+    volumes:
+    - ./coverage:/usr/src/app/coverage
+    - .:/usr/src/app
