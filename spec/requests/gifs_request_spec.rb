@@ -33,13 +33,12 @@ RSpec.describe '/gifs', type: :request do
     subject(:route) { get "/gifs/#{slug}" }
 
     context 'when the slug is valid' do
-      let(:slug) { 'JIX9t2j0ZTN9S'}
+      let(:slug) { 'JIX9t2j0ZTN9S' }
 
       it_behaves_like 'valid response'
     end
 
     context 'when the slug is not valid' do
     end
-
   end
 end

@@ -1,9 +1,23 @@
 version: '3.7'
 
 services:
+  app:
+    build: .
+    image: giphy_app
+
   rspec:
     command: bundle exec rspec -f documentation .
-    build: .
+    environment:
+      RAILS_ENV: test
+    image: giphy_app
     volumes:
     - ./coverage:/usr/src/app/coverage
+    - .:/usr/src/app
+
+  guard:
+    command: bundle exec guard
+    environment:
+      RAILS_ENV: test
+    image: giphy_app
+    volumes:
     - .:/usr/src/app
