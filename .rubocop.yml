@@ -12,6 +12,10 @@ Metrics/BlockLength:
   Exclude:
     - spec/**/*.rb
 
+RSpec/DescribeClass:
+  Exclude:
+    - spec/requests/*
+
 AllCops:
   TargetRubyVersion: 2.7
   NewCops: enable
