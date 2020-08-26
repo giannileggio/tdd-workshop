@@ -5,4 +5,9 @@ RSpec.describe '/gifs' do
     get '/gifs'
     expect(response.status).to be 200
   end
+
+  it 'returns json' do
+    get '/gifs'
+    expect(response.media_type).to eq 'application/json'
+  end
 end

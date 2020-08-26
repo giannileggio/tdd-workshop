@@ -1,5 +1,5 @@
 class GifsController < ApplicationController
   def index
-    render plain: 'ok'
+    render json: {}
   end
 end
